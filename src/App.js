@@ -21,7 +21,7 @@ function App() {
     <>
     {
       usuarioGlobal
-      ? <Home />
+      ? <Home correoUsuario={usuarioGlobal.email} />
       : <Logueo />
     }
     </>
