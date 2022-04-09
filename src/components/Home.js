@@ -48,10 +48,18 @@ export const Home = ({ correoUsuario }) => {
       Hola, sesión iniciada
       <button onClick={() => signOut(auth)}>Cerrar sesión</button>
       <hr />
-      <AgregarTarea />
+      <AgregarTarea
+        arrayTareas={arrayTareas} 
+        setArrayTareas={setArrayTareas}
+        correoUsuario={correoUsuario}
+      />
       {
         arrayTareas
-        ? <ListadoTareas arrayTareas={arrayTareas} />
+        ? <ListadoTareas 
+            arrayTareas={arrayTareas} 
+            setArrayTareas={setArrayTareas}
+            correoUsuario={correoUsuario}
+          />
         : null
       }
     </div>
